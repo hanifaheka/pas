@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAN Insan Cendekia Serpong</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Signika+Negative&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <div class="medsos">
+        <div class="container">
+            <ul>
+                <li><a href="https://id-id.facebook.com/Manicserpong/"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/official_manics"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/official_manics/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="youtube.com/c/MANInsanCendekiaSerpong"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cover">
+        <img src="banner.png" width="1346" height="160">
+        <style>
+            .cover img{
+                display: flex;
+                margin: 0;
+            }
+        </style>
+    </div>
+    <header>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">BERANDA</a></li>
+                <li><a href="petunjukteknis.html">PETUNJUK TEKNIS</a></li>
+                <li class="active"><a href="pendaftaranonline.html">PENDAFTARAN ONLINE</a></li>
+                <li><a href="login.html">MASUK</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <h3>Pendaftaran Peserta Didik Baru</h3>
+            <h1>MAN INSAN CENDEKIA SERPONG</h1>
+            <h5>Tahun Pelajaran 2023/2024</h5>
+            <div class="countdown">
+                <div id="hari">NA</div>
+                <div id="jam">NA</div>
+                <div id="menit">NA</div>
+                <div id="detik">NA</div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var countDate = new Date("15 January, 2023 10:00:00").getTime();
+            function newYear(){
+                var now = new Date().getTime();
+                gap = countDate - now;
+
+                var detik = 1000;
+                var menit = detik * 60;
+                var jam = menit * 60;
+                var hari = jam * 24
+
+                var h = Math.floor(gap/(hari));
+                var j = Math.floor((gap %(hari))/(jam));
+                var m = Math.floor((gap %(jam))/(menit));
+                var d = Math.floor((gap %(menit))/(detik));
+
+                document.getElementById('hari').innerText = h;
+                document.getElementById('jam').innerText = j;
+                document.getElementById('menit').innerText = m;
+                document.getElementById('detik').innerText = d;
+            }
+            setInterval(function(){
+                newYear();
+            },1000);
+        </script>    
+    </section>
+    <footer>
+        <div class="container">
+            <small>Copyright &copy; 2022 Hanifah Eka. All Rights Reserved.</small>
+        </div>
+    </footer>
+</body>
+</html>
